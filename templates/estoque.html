@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Estoque</title>
+</head>
+<body>
+    <h2>Lista de Estoque</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Código de Barras</th>
+            <th>Quantidade</th>
+            <th>Preço</th>
+        </tr>
+        {% for item in estoque %}
+        <tr>
+            <td>{{ item.id_item }}</td>
+            <td>{{ item.nome }}</td>
+            <td>{{ item.codigo_barras }}</td>
+            <td>{{ item.quantidade }}</td>
+            <td>R$ {{ item.preco }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('dashboard') }}">Voltar</a>
+</body>
+</html>

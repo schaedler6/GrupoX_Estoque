@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Bem-vindo, {{ usuario.nome }}!</h2>
+    <nav>
+        <a href="{{ url_for('usuarios') }}">Usuários</a> |
+        <a href="{{ url_for('estoque') }}">Estoque</a> |
+        <a href="{{ url_for('logout') }}">Sair</a>
+    </nav>
+</body>
+</html>
